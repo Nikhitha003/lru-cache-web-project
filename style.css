@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.controls {
+    margin: 20px;
+}
+
+input {
+    margin: 5px;
+    padding: 6px;
+    width: 90px;
+}
+
+button {
+    padding: 6px 14px;
+    margin: 5px;
+    cursor: pointer;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #125aa0;
+}
+
+#cacheContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cache-item {
+    background: #4CAF50;
+    color: white;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+    min-width: 90px;
+    animation: slideIn 0.4s ease;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.cache-item.removed {
+    background: #e53935;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
